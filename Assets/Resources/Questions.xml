@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Questions>
+	<Question name="Sleeve" type="">
+		<Text>Quelle phrase est vraie ?</Text>
+		<Choices>
+			<Choice name="Sleeve1">Le chirurgien retire une petite partie de mon estomac( environ ¼).</Choice>
+			<Choice name="Sleeve2">Le chirurgien retire une partie importante de mon estomac( environ 2/3).</Choice>
+		</Choices>	
+	</Question>
+	<Question name="Sleeve1" type="Demo">
+		<Text>Faux : c’est  2/3 environ de votre estomac qui sont retirés.</Text>
+		<Choices>
+			<Choice name="Sleeve">Ok</Choice>
+		</Choices>	
+		<Demo>SleeveDemo</Demo>
+	</Question>
+	<Question name="Sleeve2" type="Demo">
+		<Text>Vrai : effectivement environ 2/3 de votre estomac sont retirés et notamment la partie contenant des cellules qui stimulent l’appétit.</Text>
+		<Choices>
+			<Choice name="Alimentation">Ok </Choice>
+		</Choices>	
+		<Demo>SleeveDemo</Demo>
+	</Question>
+	<Question name="ByPass" type="">
+		<Text>Quelle phrase est vraie ?</Text>
+		<Choices>
+			<Choice name="ByPass1">Le chirurgien retire seulement une partie de mon estomac.</Choice>
+			<Choice name="ByPass2">Le chirurgien sectionne mon estomac pour ne garder qu’une petite poche gastrique et crée un court circuit en reliant cette poche à l’intestin grêle.</Choice>
+		</Choices>	
+	</Question>
+	<Question name="ByPass1" type="Demo">
+		<Text>Faux : l’intervention consiste créer une petite poche gastrique reliée à l’intestin grêle en court circuitant le duodenum et une partie importante de votre estomac.</Text>
+		<Choices>
+			<Choice name="ByPass">Ok</Choice>
+		</Choices>	
+		<Demo>ByPassDemo</Demo>
+	</Question>
+	<Question name="ByPass2" type="Demo">
+		<Text>Vrai : effectivement, l’intervention consiste à ne garder qu’une petite poche gastrique reliée directement à l’intestin grêle : les aliments sont donc assimilés en moindre quantités.</Text>
+		<Choices>
+			<Choice name="Alimentation">Ok</Choice>
+		</Choices>	
+		<Demo>ByPassDemo</Demo>
+	</Question>
+	<Question name="Alimentation" type="">
+		<Text>La chirurgie nécessite-t-elle que j’adapte mon alimentation ?</Text>
+		<Choices>
+			<Choice name="Alimentation1">Non</Choice>
+			<Choice name="Alimentation2">Oui</Choice>
+		</Choices>	
+	</Question>
+	<Question name="Alimentation1" type="">
+		<Text>Incorrect. Il est nécessaire d’adapter votre alimentation après la chirurgie bariatrique pour une réussite à long terme de cette intervention chirurgicale.</Text>
+		<Choices>
+			<Choice name="Alimentation">Ok</Choice>
+		</Choices>	
+	</Question>
+	<Question name="Alimentation2" type="">
+		<Text>Correct. Effectivement, compte tenu de la diminution de votre estomac, les quantités d’aliments sont diminuées, vous devez donc adapter votre alimentation pour une réussite à long terme de cette intervention chirurgicale.</Text>
+		<Choices>
+			<Choice name="End">Ok</Choice>
+		</Choices>	
+	</Question>
+</Questions>

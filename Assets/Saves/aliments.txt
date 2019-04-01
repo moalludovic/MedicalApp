@@ -1,0 +1,8 @@
+{"aliments":[
+{"name":"carrotte","types":["legume"],"portions":5,"slices":5,"mealType1":"entrée","mealType2":"","mealTypeThreshold":0,"greasy":false,"sugary":false,"multiMesh":false},
+{"name":"salade verte","types":["legume"],"portions":6,"slices":5,"mealType1":"entrée","mealType2":"plat principal","mealTypeThreshold":5,"greasy":false,"sugary":false,"multiMesh":false},
+{"name":"eau","types":["boisson"],"portions":10,"slices":2,"mealType1":"","mealType2":"","mealTypeThreshold":0,"greasy":false,"sugary":false,"multiMesh":true},
+{"name":"oeuf","types":["proteine"],"portions":10,"slices":2,"mealType1":"entrée","mealType2":"","mealTypeThreshold":0,"greasy":false,"sugary":false,"multiMesh":false},
+{"name":"fromage","types":["proteine"],"portions":10,"slices":3,"mealType1":"entrée","mealType2":"","mealTypeThreshold":0,"greasy":false,"sugary":false,"multiMesh":true},
+{"name":"pain","types":["feculent","typeTest"],"portions":4,"mealType1":"entrée","mealType2":"plat principal","mealTypeThreshold":5,"slices":5,"greasy":false,"sugary":true,"multiMesh":false}
+]}

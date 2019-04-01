@@ -1,0 +1,5 @@
+{"scenarios":[
+{"name":"Self","skyboxRotation":180,"aliments":["pain", "eau","oeuf","fromage"]},
+{"name":"Traditionnel","skyboxRotation":0,"aliments":["pain", "eau"]},
+{"name":"Pique-nique","skyboxRotation":0,"aliments":["pain", "eau"]}
+]}

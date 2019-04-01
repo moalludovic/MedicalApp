@@ -1,0 +1,18 @@
+﻿{"questions":[
+{
+"Text":"firstName, votre repas vous semble-t-il structuré ?",
+"Choices":["Non","Oui"],
+"Answers":["Non en effet", "ça peut aller", "Si c'est bien","Et bah non","Disons que c'est moyen","Oui c'est bien"]
+},
+{
+"Text":"firstName, votre repas vous semble-t-il équilibré ?",
+"Choices":["Non","Oui"],
+"Answers":["Non en effet", "ça peut aller", "Si c'est bien","Et bah non","Disons que c'est moyen","Oui c'est bien"]
+},
+{"Text":"firstName, votre repas vous semble-t-il en quantité suffisante ?",
+"Choices":["Trop importante","Adaptée","Insuffisante"],
+"Answers":["Non, c'est clairement pas assez", "Non, c'est pas assez", "Non, c'est bien","Oui, c'est trop", "Oui, c'est beaucoup trop", 
+"Non, c'est clairement pas assez", "Non, c'est pas assez", "Oui, c'est bien", "Non, c'est trop", "Non, c'est beaucoup trop", 
+"Oui, c'est clairement pas assez", "Oui, c'est pas assez", "Non, c'est bien", "Oui, c'est trop", "Oui, c'est beaucoup trop"]
+}
+]}
