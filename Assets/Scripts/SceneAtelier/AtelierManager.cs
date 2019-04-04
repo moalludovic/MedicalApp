@@ -41,6 +41,8 @@ public class AtelierManager : MonoBehaviour {
     private List<GameObject> _TypesList;
 
     public GameObject plateBlocAliment;
+    public int nbOnLine = 8;
+    public float spacing = 2.0f;
 
     // intialisation de l'instance du manager
     private void Awake()
@@ -150,7 +152,6 @@ public class AtelierManager : MonoBehaviour {
     {
         Consigne.text = Consignes[1];
         // espacement
-        float spacing = 3.0f;
         // #######
         // Récupération des types d'aliments
         // #######
@@ -170,35 +171,35 @@ public class AtelierManager : MonoBehaviour {
 
 
             int nb = MedicalAppManager.Instance().theScenario.aliments.Count;
-            int rest = nb % 3;
-            int nbOnLine;//nombre de colonnes
+            //int rest = nb % 3;
+            //int nbOnLine;//nombre de colonnes
             float y = spacing / 2;
-            int nbSup = nb;
-            // calcul complique pour placer les aliments
-            if (nb > 3)
+            //int nbSup = nb;
+            //// calcul complique pour placer les aliments
+            if (nb > nbOnLine)
             {
-                switch (rest)
-                {
-                    case 0:
-                        break;
-                    case 1:
-                        nbSup += 2;
-                        break;
-                    case 2:
-                        nbSup += 1;
-                        break;
-                    default:
-                        break;
-                }
-                nbOnLine = nbSup / 3;
-                if (nb > 6)
-                {
+            //    switch (rest)
+            //    {
+            //        case 0:
+            //            break;
+            //        case 1:
+            //            nbSup += 2;
+            //            break;
+            //        case 2:
+            //            nbSup += 1;
+            //            break;
+            //        default:
+            //            break;
+            //    }
+            //    nbOnLine = nbSup / 3;
+            //    if (nb > 6)
+            //    {
                     y = spacing;
-                }
+            //    }
             }
             else
             {
-                nbOnLine = nb;
+            //    nbOnLine = nb;
                 y = 0;
             }
 
@@ -287,7 +288,7 @@ public class AtelierManager : MonoBehaviour {
                         //aliment.GetComponent<MeshRenderer>().material.mainTexture = Resources.Load<Texture>("Aliments/Textures/" + folders[folder][i].name);
                         
 
-                        aliment.transform.localScale = meshSize / aliment.GetComponent<MeshFilter>().mesh.bounds.size.y * Vector3.one;
+                        aliment.transform.localScale = meshSize / Mathf.Max(aliment.GetComponent<MeshFilter>().mesh.bounds.size.x, aliment.GetComponent<MeshFilter>().mesh.bounds.size.y, aliment.GetComponent<MeshFilter>().mesh.bounds.size.z) * Vector3.one;
 
                         // suppression collider si extiant + ajout box collider
                         if (aliment.GetComponent<Collider>())
