@@ -1160,7 +1160,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 741852275}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 649.22327, y: 153.28409, z: -43.44745}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1850,7 +1850,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1101656653}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.2057276, y: 2.4228015, z: 5.61254}
+  m_LocalPosition: {x: 0, y: 0, z: 2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1887,6 +1887,13 @@ MonoBehaviour:
   - "S\xE9lectionnez un aliment pour l'ajouter \xE0 votre plateau"
   - "S\xE9lectionnez un aliment pour le modifier"
   plateBlocAliment: {fileID: 1722165358988438, guid: 79255d2089b531140bd635d901c43fe5,
+    type: 2}
+  nbOnLine: 8
+  spacing: 2.25
+  YOffSet: 1
+  YNameSpacing: 0.75
+  AlimentScale: 1
+  AlimentNamePrefab: {fileID: 1337845314224462, guid: 15abb78c56bdbbe4e8a5d0ebcc01739c,
     type: 2}
 --- !u!114 &1101656656
 MonoBehaviour:
@@ -2409,7 +2416,7 @@ Prefab:
     - target: {fileID: 224968503142856764, guid: c1cb054e140ea4a4fb1fe44bac2f9870,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -100
+      value: -30
       objectReference: {fileID: 0}
     - target: {fileID: 224968503142856764, guid: c1cb054e140ea4a4fb1fe44bac2f9870,
         type: 2}

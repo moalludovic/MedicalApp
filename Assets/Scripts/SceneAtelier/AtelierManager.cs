@@ -42,7 +42,11 @@ public class AtelierManager : MonoBehaviour {
 
     public GameObject plateBlocAliment;
     public int nbOnLine = 8;
-    public float spacing = 2.0f;
+    public float spacing = 3.0f;
+    public float YOffSet = 1.0f;
+    public float YNameSpacing = 0.75f;
+    public float AlimentScale = 1.0f;
+    public GameObject AlimentNamePrefab;
 
     // intialisation de l'instance du manager
     private void Awake()
@@ -166,11 +170,9 @@ public class AtelierManager : MonoBehaviour {
             GameObject parent = new GameObject("Aliments");
             parent.transform.parent = Instance().transform;
 
-
-
-
-
             int nb = MedicalAppManager.Instance().theScenario.aliments.Count;
+
+            Debug.Log(nb);
             //int rest = nb % 3;
             //int nbOnLine;//nombre de colonnes
             float y = spacing / 2;
@@ -178,24 +180,7 @@ public class AtelierManager : MonoBehaviour {
             //// calcul complique pour placer les aliments
             if (nb > nbOnLine)
             {
-            //    switch (rest)
-            //    {
-            //        case 0:
-            //            break;
-            //        case 1:
-            //            nbSup += 2;
-            //            break;
-            //        case 2:
-            //            nbSup += 1;
-            //            break;
-            //        default:
-            //            break;
-            //    }
-            //    nbOnLine = nbSup / 3;
-            //    if (nb > 6)
-            //    {
-                    y = spacing;
-            //    }
+                y = spacing;
             }
             else
             {
@@ -211,11 +196,6 @@ public class AtelierManager : MonoBehaviour {
                         // #######
                         // Instanciation des modèles en fonction de leur type
                         // #######
-                        // tableau contenant les types d'aliments
-
-                        
-                        
-
                         // position
                         Vector3 pos = transform.position;
 
@@ -237,20 +217,16 @@ public class AtelierManager : MonoBehaviour {
                         }
 
 
-                        pos.y = y;
+                        pos.y = y + YOffSet;
                         pos.z = 0;
                         
 
                         // nom aliment
-                        GameObject objName = new GameObject("name-" + a.name);
+                        GameObject objName = Instantiate(AlimentNamePrefab);
                         objName.transform.localScale = new Vector3(0.035f, 0.035f, 1.0f);
                         objName.transform.parent = parent.transform;
-                        objName.transform.position = pos - Vector3.up * 1.5f;
-
-                        objName.AddComponent<TextMesh>();
+                        objName.transform.position = pos - Vector3.up * YNameSpacing;
                         objName.GetComponent<TextMesh>().text = a.name;
-                        objName.GetComponent<TextMesh>().anchor = TextAnchor.MiddleCenter;
-                        objName.GetComponent<TextMesh>().fontSize = 100;
 
                         // aliment i + j
 
@@ -303,6 +279,7 @@ public class AtelierManager : MonoBehaviour {
                         // Instaciation de l'aliment avec parent le type correspondant
                         //GameObject obj = Instantiate(aliment, pos, transform.rotation, parent.transform);
                         aliment.transform.position = pos;
+                        aliment.transform.localScale *= AlimentScale;
                         aliment.transform.rotation = transform.rotation;
                         aliment.transform.parent = parent.transform;
                         
